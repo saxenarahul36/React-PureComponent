@@ -65,7 +65,7 @@ export default class ParentComponent extends React.Component {
         <br />
         Normal React Component: {this.state.user.id}
         <br />
-        <PureComponent user={user} />
+        <PureComponent fun={()=> {}} user={user} />
       </div>
     );
   }

@@ -9,6 +9,12 @@ function App() {
     <div className="App">
       <h1>React JS: Normal React Component VS PureComponent</h1>
       <HomeComponent />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      Note : Dont bind a function in PureComponent like:<br></br>
+      {"<PureComponent fun={()=> {}} user={user} />"}
     </div>
   );
 }
