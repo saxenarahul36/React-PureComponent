@@ -12,6 +12,7 @@ export default class ParentComponent extends React.Component {
       }
     };
     this.chanrtext = this.chanrtext.bind(this);
+    this.changePureCompnnt = this.changePureCompnnt.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +35,18 @@ export default class ParentComponent extends React.Component {
     //   return { user: oldState.user };
     // });
   }
+
+  changePureCompnnt() {
+    this.setState({
+      user: {
+        name: "rahul Saxena",
+        id: Math.random()
+      }
+    });
+    // this.setState(oldState => {
+    //   return { user: oldState.user };
+    // });
+  }
   render() {
     console.log("render() method called ParentComponent");
     const { user } = this.state;
@@ -43,6 +56,11 @@ export default class ParentComponent extends React.Component {
           type="button"
           value="Change User ID value"
           onClick={this.chanrtext}
+        />
+        <input
+          type="button"
+          value="change PureCompnnt value"
+          onClick={this.changePureCompnnt}
         />
         <br />
         Normal React Component: {this.state.user.id}
